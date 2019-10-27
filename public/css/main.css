@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 8px;
+
+    background-color: black;
+
+    font-family: "Arial";
+    font-size: 1.4em;
+    text-align: center;
+}
+
+h1 {
+    color: grey;
+    font-weight: normal;
+}
+
+button {
+    display: block;
+    border: 0;
+    background: 0;
+
+    margin: 20px auto;
+
+    color: lightgreen;
+    font-size: 1.6em;
+}
