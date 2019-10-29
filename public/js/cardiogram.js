@@ -143,9 +143,7 @@ function Start() {
     ctx = canvas.getContext("2d")
 
     socket.on("stopHeart", stopHeartMonitor)
-    socket.on("restartHeart", ()=> {
-        window.location.reload()
-    })
+    socket.on("restartHeart", ()=> startFrame = 0)
 
     setInterval(Update, 1/60)
 }
