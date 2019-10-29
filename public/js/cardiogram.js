@@ -133,17 +133,18 @@ let coords = [
 function Start() {
     socket = io()
 
+    socket.on("stopHeart", stopHeartMonitor)
+    socket.on("restartHeart", ()=> startFrame = 0)
+
+
     canvas = document.createElement("canvas")
 
     canvas.width = document.body.clientWidth
     canvas.height = document.body.clientHeight
 
     document.body.appendChild(canvas)
-
     ctx = canvas.getContext("2d")
 
-    socket.on("stopHeart", stopHeartMonitor)
-    socket.on("restartHeart", ()=> startFrame = 0)
 
     setInterval(Update, 1/60)
 }
