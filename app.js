@@ -10,6 +10,16 @@ app.get("/cardiogram", (req, res) => {
     res.sendFile(__dirname + "/public/cardiogram.html")
 })
 
+app.get("/cardiogram/stop", (req, res) => {
+    io.emit("stopHeart")
+    res.send("gucci")
+})
+
+app.get("/cardiogram/restart", (req, res) => {
+    io.emit("restartHeart")
+    res.send("gucci")
+})
+
 io.on("connection", (socket) => {
     console.log(socket.id)
     socket.on("disconnect", () => {
