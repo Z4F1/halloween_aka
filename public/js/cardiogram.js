@@ -79,13 +79,16 @@ function Update() {
             if(j == 0){
                 height = 0;
             }else {
-                height = map_range(coords[j].height, coords[j-1].i, i - coords[j].i, coords[j-1].height, coords[j].height);
+                height = (coords[j-1].height - coords[j].height)
             }
 
             /*
 
+            coords[j].i - coords[j-1].i
+
             0 - 50
-            linear
+
+            /
 
 
             */
