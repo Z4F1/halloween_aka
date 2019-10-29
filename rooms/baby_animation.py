@@ -8,6 +8,13 @@ from pyfirmata import Arduino, util
 
 led = 12
 
+'''
+
+pin 5 servo
+pin 12 lys / relay
+
+'''
+
 if __name__ == "__main__":
 
     datascream, fsscream = sf.read("public/audio/baby_scare.wav", dtype="float32")

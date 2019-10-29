@@ -7,6 +7,8 @@ let gridSpace = 32
 
 let startFrame = 0
 
+let bpm = 80;
+
 let coords = [
     {
         i: 0,
@@ -161,6 +163,14 @@ function Update() {
     }
     for (let y = 0; y < canvas.width/gridSpace + 1; y++) {
         ctx.fillRect(0, y*gridSpace-5, canvas.width, 1)
+    }
+
+    ctx.fillStyle = "#ffffff"
+    ctx.font = "50px Arial"
+    ctx.fillText(bpm + " BPM", canvas.width - 210, 75)
+
+    if(frames%120 == 0){
+        bpm = Math.floor(70 + (20*Math.random()))
     }
 
     let lastPos = {
