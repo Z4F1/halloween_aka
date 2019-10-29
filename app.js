@@ -6,6 +6,10 @@ const io = require("socket.io")(http)
 
 app.use(express.static(__dirname + "/public"))
 
+app.get("/cardiogram", (req, res) => {
+    res.sendFile(__dirname + "/public/cardiogram.html")
+})
+
 io.on("connection", (socket) => {
     console.log(socket.id)
     socket.on("disconnect", () => {
