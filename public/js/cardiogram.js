@@ -30,7 +30,7 @@ let coords = [
     },
     {
         i: 325,
-        height: -100
+        height: -150
     },
     {
         i: 350,
@@ -58,7 +58,7 @@ let coords = [
     },
     {
         i: 725,
-        height: -100
+        height: -150
     },
     {
         i: 750,
@@ -86,7 +86,7 @@ let coords = [
     },
     {
         i: 1125,
-        height: -100
+        height: -150
     },
     {
         i: 1150,
@@ -114,7 +114,7 @@ let coords = [
     },
     {
         i: 1525,
-        height: -100
+        height: -150
     },
     {
         i: 1550,
@@ -184,7 +184,7 @@ function Update() {
 
             ctx.lineWidth = 4;
 
-            let opacity = caluclateOpacity(frames*2 - i)
+            let opacity = caluclateOpacity(frames*1.2 - i)
             ctx.strokeStyle = "rgba(0, 112, 0, " + opacity + ")"
 
             ctx.moveTo(lastPos.x, Math.floor(canvas.height/2) - lastPos.y)
