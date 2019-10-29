@@ -1,14 +1,13 @@
-import webview
 import time
 
-def settings(window):
-    window.load_css("body { background-color: black !important; }")
+from pyfirmata import Arduino, util
 
 if __name__ == "__main__":
-    window = webview.create_window("Fullscreen", "http://floatagoat.priv/", fullscreen=True)
+    ardu = Arduino("COM3")
 
-    webview.start(settings, window)
+    servo = ardu.get_pin("d:5:s")
 
     time.sleep(1)
-
-    window.load_url("https://google.com")
+    servo.write(255)
+    time.sleep(1)
+    servo.write(0)
